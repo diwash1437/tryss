@@ -1,0 +1,19 @@
+table {
+  width: 100%;
+  height: 80px;
+  border-collapse: collapse;
+}
+
+td{
+  width: auto;
+  height: 50px;
+}
+.product-image img
+{
+  width: 80%;
+  height: 120px;
+  object-position: center;
+  object-fit: cover;
+  overflow: auto;
+}
+
