@@ -13,6 +13,8 @@ body {
   background: #111;
   padding: 12px 20px;
   color: white;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+  flex-wrap: wrap; /* allow wrapping on small screens */
 }
 
 .logo {
@@ -42,6 +44,7 @@ body {
 }
 /* Dropdown */
 .dropdown-menu {
+  /* display: none; */
   position: absolute;
   top: 100%;
   left: 0px;
@@ -49,7 +52,8 @@ body {
   list-style: none;
   padding: 10px 0;
   /* min-width: 100px;   increase width */
-  width: max-content; /* auto-fit text */
+  width:fit-content; /* auto-fit text */
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
   display: none;
   z-index: 9999;
 }
@@ -61,11 +65,13 @@ body {
 
 .dropdown-menu li:hover {
   background: #333;
+  overflow: hidden;
 }
 
 /* Show dropdown */
 .dropdown:hover .dropdown-menu {
   display: block;
+  overflow: hidden;
 }
 
 /* Underline animation */
@@ -79,10 +85,9 @@ body {
   background: red;
   transition: width 0.4s ease;
 }
-
-.dropdown-menu li:hover::after {
-  width: 100%;
-}
+  .dropdown-menu li::after {
+    width: 100%; /* always underline */
+  }
 
 
 .login-btn {
@@ -91,4 +96,87 @@ body {
   border: none;
   padding: 6px 12px;
   cursor: pointer;
+}
+
+
+/* Right-side login button */
+.nav-right {
+  display: flex;
+  align-items: center;
+}
+
+/* === Table / Product Image Styling === */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed; /* prevent overflow */
+}
+
+td {
+  width: auto;
+  height: 50px;
+  text-align: center;
+}
+
+
+
+/* === Responsive for Mobile === */
+@media screen and (max-width: 768px) {
+
+  /* Navbar: stack logo, menu, right button */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    width: 100%;
+    gap: 5px;
+  }
+
+  .nav-links li {
+    width: 100%;
+  }
+
+  .dropdown-menu {
+    position: static; /* dropdowns flow naturally */
+    box-shadow: none;
+    padding-left: 10px;
+  }
+
+/* Underline animation */
+.dropdown-menu li::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: auto;
+  height: 2px;
+  background: red;
+  transition: width 0.4s ease;
+}
+  .dropdown-menu li, span
+  {
+    font-size: 30px;
+    letter-spacing: 4px;
+  }
+
+
+  .nav-right {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  /* Table / Product images: scale down */
+  table, td {
+    width: 100%;
+    font-size: 14px; /* smaller text */
+  }
+
+  .product-image img {
+    height: 100px;
+  }
 }
