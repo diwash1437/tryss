@@ -1,0 +1,18 @@
+.imgWrapper {
+  /* width: 20px; */
+  height: 100px;
+  overflow: hidden;   /* 👈 important */
+  /* background-color: aqua; */
+}
+
+.tsCorporation {
+  width: 150px;
+  height: 90px;
+  object-fit: cover;
+  /* transform: scale(1.1); */
+  transition: transform 0.3s ease;
+}
+
+.tsCorporation:hover {
+  transform: scale(1.4);
+}

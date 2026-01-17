@@ -1,7 +1,14 @@
 import { tsCorporation } from "../data/tsCorporation";
-
+import './tsCorporation.css';
 export function TsCorporation()
 {
+
+//     const kobeSirloin = tsCorporation.filter(item =>
+//   item.name.includes('神戸牛') && item.name.includes('サーロイン')
+// );
+
+// console.log(kobeSirloin);
+
     return(
      <div>
    
@@ -15,6 +22,7 @@ export function TsCorporation()
                 <thead>
                 <tr>
                     <td>name</td>
+                    <td>English name</td>
                     <td>image</td>
                 </tr>
                 </thead>
@@ -24,7 +32,10 @@ export function TsCorporation()
                         return(
                     <tr key={item.id}>
                     <td>{item.name}</td>
-                    <td> {<img src={item.image}></img>}</td>
+                    <td>{item.eName}</td>
+             
+                    <td className="imgWrapper"> {<img src={item.image} width="90" className="tsCorporation"/>}</td>
+                
                      </tr>
                     )})
                     }
@@ -32,6 +43,8 @@ export function TsCorporation()
                 </tbody>
 
               </table>
+
+              
             </div>
            
         )
