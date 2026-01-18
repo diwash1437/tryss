@@ -18,8 +18,8 @@ function Restaurant() {
                         <span>Premium 🥩 ▾</span>
                         <ul className="dropdown-menu">
                             <li>
-                                <Link to='/lunch'>   
-                                <span>Lunch</span>
+                                <Link to='/lunch'>
+                                    <span>Lunch</span>
                                 </Link>
                             </li>
                             <li>
@@ -38,13 +38,13 @@ function Restaurant() {
                                 </Link>
                             </li>
                             <li>
-                                <Link to='/tsCorporation'>   
-                                <span>Ts-Corporation</span>
+                                <Link to='/tsCorporation'>
+                                    <span>Ts-Corporation</span>
                                 </Link>
                             </li>
                             <li>
-                                <Link to='/nabata'>   
-                                <span>NabataColtd</span>
+                                <Link to='/nabata'>
+                                    <span>NabataColtd</span>
                                 </Link>
                             </li>
                             <li>Drinks</li>
@@ -55,8 +55,8 @@ function Restaurant() {
                         <span>Recipe ▾</span>
                         <ul className="dropdown-menu">
                             <li>
-                                <Link to='/pickurusu'>   
-                                <span>Pickurusu</span>
+                                <Link to='/pickurusu'>
+                                    <span>Pickurusu</span>
                                 </Link>
                             </li>
                             <li>
@@ -77,6 +77,41 @@ function Restaurant() {
                     <button className="login-btn">Login</button>
                 </div>
             </nav>
+            <section>
+                <div className="head-img">
+                    <img src="./image/homepage.jpg" alt="" />
+                </div>
+
+            </section>
+            <section className="menu-section">
+                <div className="menu-container">
+                    {/* left image  */}
+                    <div className="menu-image">
+                        <img src="./image/lunch/main.jpg" alt="Main menu" />
+                    </div>
+                    {/* right image  */}
+                    <div className="main-content">
+                        <h1>Main menu in a restaurant</h1>
+                        <p>
+                            Casual restaurant offering a wide variety of dishes for casual dining.
+                            Enjoy Italian cuisine with Japanese elements, using a variety of Kyoto
+                            ingredients such as Hiei yuba, Kyoto duck, Kyoto mochi pork, and kujo
+                            leeks. We also recommend our seasonal menu, which offers a taste of the
+                            season. The tartine arranged with monaca is both tasty and visually
+                            appealing.
+                        </p>
+                        <button className="see-more">
+                        see more <span>das</span>
+                        </button>
+                    </div>
+                </div>
+                <div className="menu-thumbnails">
+                    <img src="./image/lunch/mabusi.jpg" alt="" />
+                    <img src="./image/lunch/saikoro.jpg" alt="" />
+                    <img src="./image/lunch/harami.jpg" alt="" />
+                </div>
+
+            </section>
         </div>
 
     );
