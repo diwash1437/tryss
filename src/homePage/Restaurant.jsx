@@ -83,8 +83,14 @@ function Restaurant() {
                 </div>
 
             </section>
+
+
             <section className="menu-section">
+                <div className="main-container">
                 <div className="menu-container">
+
+
+          
                     {/* left image  */}
                     <div className="menu-image">
                         <img src="./image/lunch/main.jpg" alt="Main menu" />
@@ -110,8 +116,9 @@ function Restaurant() {
                     <img src="./image/lunch/saikoro.jpg" alt="" />
                     <img src="./image/lunch/harami.jpg" alt="" />
                 </div>
-
+            </div>
             </section>
+            
         </div>
 
     );

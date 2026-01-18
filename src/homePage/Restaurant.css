@@ -224,12 +224,20 @@ td {
   padding: 60px 40px;
 }
 
+
+.main-container
+{
+  width: 70%;
+  margin: auto;
+}
+
 /* Main layout */
 .menu-container {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
   gap: 40px;
   align-items: center;
+ 
 }
 
 /* Left image */
