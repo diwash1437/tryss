@@ -33,8 +33,8 @@ function Restaurant() {
                         <span>Order ▾</span>
                         <ul className="dropdown-menu">
                             <li>
-                                <Link to="/vegetableSoupOrder">
-                                    <span>Vegetable Soup Order</span>
+                                <Link to="/fujimatsu">
+                                    <span>Fujimatsu</span>
                                 </Link>
                             </li>
                             <li>
