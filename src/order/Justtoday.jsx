@@ -1,17 +1,18 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { alcohol } from "../data/fujimatsuColtd"
-export function FujimatsuColtd() {
+import { drinksList } from "../data/todayreport";
+import { img } from "../utils/img";
+export function Justtoday() {
    const[search, setSearch]=useState('');
 
-   const filterProduct=alcohol.filter(alchol=>
-    alchol.enName.toLowerCase().includes(search)  || alchol.jpName.includes(search)
+   const filterProduct=drinksList.filter(alchol=>
+    alchol.en.toLowerCase().includes(search)  || alchol.jp.includes(search)
    )
 
     return (
 
         <div>
-        <title>(株)ふじまつ</title>
+        <title>just today</title>
         <Link to="/">Home</Link>
 
         <input type="text" placeholder="enter the product name"
@@ -23,21 +24,22 @@ export function FujimatsuColtd() {
             <table>
                 <thead>
                     <tr>
+                        <th>S.no</th>
                         <th>Name</th>
                         <th>English Name</th>
-                        <th>category</th>
                         <th>Image</th>
+
                     </tr>
                 </thead>
                 <tbody>
                     {filterProduct.map((alcohol) => {
                         return (
-                            <tr key={alcohol.id}>
-                                <td>{alcohol.jpName}</td>
-                                <td>{alcohol.enName}</td>
-                                <td>{alcohol.category}</td>
-                                <td> <img src={alcohol.image} alt="" width={100} /></td>
-
+                            <tr key={alcohol.sn}>
+                                <td>{alcohol.sn}</td>
+                                <td>{alcohol.jp}</td>
+                                <td>{alcohol.en}</td>
+                                <td>{<img src={alcohol.image} width={200}></img>}</td>
+                    
                             </tr>
                         )
                     })}

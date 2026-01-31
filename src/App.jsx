@@ -3,7 +3,9 @@ import Restaurant from "./homePage/Restaurant";
 import NabataColtd153 from './order/NabataColtd153';
 import { TsCorporation } from './order/TsCorporation';
 import { FujimatsuColtd } from './order/FujimatsuColtd';
+import {Yoshimuratakeshi} from './order/Yoshimuratakeshi';
 import './App.css'
+import { Justtoday } from './order/justtoday';
 
 
 function App() {
@@ -16,6 +18,8 @@ function App() {
   <Route path='/tsCorporation' element={<TsCorporation/>}/>
   <Route path='/fujimatsu' element={<FujimatsuColtd/>}/>
   {/* <Route path='/try' element={<Trycheckitem/>}/> */}
+  <Route path='/yoshimuratakeshi' element={<Yoshimuratakeshi/>}/>
+  <Route path='/just-today' element={<Justtoday/>}/>
 
  </Routes>
   )

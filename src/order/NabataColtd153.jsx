@@ -23,7 +23,7 @@ function NabataColtd153() {
 
   return (
     <>
-      <title>Nabata Co ltd (株)名畑</title>
+      <title>(株)名畑 Nabata Co ltd </title>
 
       <Link to="/">Home</Link>
 

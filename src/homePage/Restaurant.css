@@ -186,7 +186,7 @@ td {
 /* ===== Header / Hero Section ===== */
 .head-img {
   width: 100%;
-  height: 350px;              /* reduce height */
+  height: 550px;              /* reduce height */
   position: relative;
   overflow: hidden;
 }
@@ -197,7 +197,7 @@ td {
   height: 100%;
   object-fit: cover;          /* fills nicely without distortion */
   object-position: center;    /* center focus */
-  display: block;
+  /* display: block; */
 }
 
 .head-img::after {
@@ -224,56 +224,106 @@ td {
 ❌ Don’t center the same thing twice
 ✅ Use either lunch-container margin: 0 auto or which is lunch-grid flex centering */
 .lunch-grid{
-  margin-top: 50px;
-  display: flex;
-  justify-content: center;
-  background-color: black;
-  padding: 120px 0;
-  /* position: relative; */
-  overflow: visible;
-}
-.lunch-container {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: center; /* vertical center only */
-  gap: 40px;
-  max-width: 1000px; /* 🔥 controls overall width */
-  width: 100%;   /* makes it responsive */
-  /* margin: 0 auto; center center a fixed/max-width block */
-  /* background-color: black; */
-  position: relative;
-
-}
-/* 
-🔥 This is the key part
-position: absolute + overflow: visible  to make container and elemnt outside content*/
-
-
-
-/* LEFT */
-.left-lunch-container {
-  position: absolute; /* 🔥 REQUIRED */
-  /* display: flex;
-  justify-content: center; */
-  left: -120px;
-  top: 50%;
-  transform: translateY(-50%);
+    width: 100%;
+    padding: 40px 0;
+    text-align: center;
 }
 
-/* IMAGE */
-.left-lunch-container img {
-  width: 400px;
-  height: 400px;
-  object-fit: cover;
+.lunch-grid .lunch-second-grid
+{
+  max-width: 100%;
+}
+.lunch-third-child
+{
+    /* margin: em 0; */
+    padding: 0 15px;
+    position: relative;
 }
 
-/* RIGHT */
-.right-menu-container {
-  max-width: 600px;
+.lunch-third-child::before
+{
+    position: absolute;
+    content: "";
+    background: #000;
+    box-sizing: border-box;
+    height: 90%;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    z-index: -1;
+}
+
+
+.lunch-container
+{
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+}
+
+
+.lunchmenu-image-grid
+{
+    width: 50%;
+    display: grid;
+    grid-template-rows: 422.5px auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+
+}
+.lunchmenu-image-grid img:first-child
+{
+  width: 100%;
+}
+.lunchmenu-image-grid img:first-child{
+   grid-column: 1 / span 3;
+    height: 100%;
+    min-height: 422.5px;
+    max-height: 422.5px;
+    object-fit: cover;
+    object-position: center;
+}
+.lunchmenu-image-grid img:nth-child(2){
+    height: 100%;
+    max-height: 127.5px;
+    object-fit: cover;
+}
+.lunchmenu-image-grid img:nth-child(3){
+    height: 100%;
+    max-height: 127.5px;
+    object-fit: cover;
+}
+
+.lunchmenu-image-grid img:nth-child(4){
+    height: 100%;
+    max-height: 127.5px;
+    object-fit: cover;
+}
+
+.left-menu-container
+{
   color: white;
-   margin-left: 300px; /* 🔥 space for floating image */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  font-size: 20px;
 }
 
+.left-menu-container .lunch-menu-btn
+{
+  width: 170px;
+  padding: 20px 40px;
+  text-align: left;
+  font-weight: 500;
+  background-color: transparent;
+
+}
 
 @media (max-width: 500px) {
   .left-lunch-container {

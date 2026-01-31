@@ -1,6 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import './Restaurant.css';
+import { img } from "../utils/img";
 
 function Restaurant() {
     // const navigate= useNavigate();
@@ -34,7 +35,12 @@ function Restaurant() {
                         <ul className="dropdown-menu">
                             <li>
                                 <Link to="/fujimatsu">
-                                    <span>Fujimatsu</span>
+                                    <span>(株)ふじまつ Fujimatsu</span>
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/yoshimuratakeshi">
+                                    <span>(株)吉村武 Yoshimuratakeshi</span>
                                 </Link>
                             </li>
                             <li>
@@ -44,10 +50,15 @@ function Restaurant() {
                             </li>
                             <li>
                                 <Link to='/nabata'>
-                                    <span>NabataColtd</span>
+                                    <span> (株)名畑 NabataColtd</span>
                                 </Link>
                             </li>
-                            <li>Drinks</li>
+                       
+                            <li>
+                                <Link to=''>
+                                    <span>エコラボ合同会社 cleaning product</span>
+                                </Link>
+                            </li>
                         </ul>
                     </li>
 
@@ -73,6 +84,10 @@ function Restaurant() {
                     </li>
                 </ul>
                 {/* RIGHT SIDE SPACE / ITEM */}
+                <div>       
+                    <Link to='/just-today'>
+                        <span>Today report</span>
+                        </Link></div>
                 <div className="nav-right">
                     <button className="login-btn">Login</button>
                 </div>
@@ -85,12 +100,11 @@ function Restaurant() {
             </section>
 
             <main>
-                <section className="lunch-grid">
-                    <div className="lunch-container">
-                    <div className="left-lunch-container">
-                        <img src="./image/lunch/mabusi.jpg" alt="" />
-                    </div>
-                    <div className="right-menu-container">
+            <section className="lunch-grid">
+                <div className="lunch-second-grid">                    
+                    <div className="lunch-third-child">  
+                     <div className="lunch-container">
+                        <div className="left-menu-container">
                         <div>Main menu in a restaurant, as opposed to the lunchtime menu</div>
                         <div className="second"> Casual restaurant offering a wide variety of dishes for casual dining.
                             Enjoy Italian cuisine with Japanese elements, using a variety of Kyoto
@@ -98,10 +112,21 @@ function Restaurant() {
                             leeks. We also recommend our seasonal menu, which offers a taste of the
                             season. The tartine arranged with monaca is both tasty and visually
                             appealing.</div>
-                        <button>See more</button>
+                        <button className="lunch-menu-btn">See more</button>
+                        </div>                                      
+                        <div className="lunchmenu-image-grid">
+                            <img src="./image/lunch/mabusi.jpg" alt="" width={150}/>
+                            <img src={img('lunch/harami.jpg')} alt="" width={150}/>
+                            <img src={img('lunch/mabusi.jpg')} alt=""  width={150}/>
+                            <img src={img('lunch/saikoro.jpg')} alt="saikoro" width={150} />
+                    
+                        </div>
+                     </div>
                     </div>
-                    </div>
-                </section>
+
+
+                </div>
+            </section>
 
             </main>
 
